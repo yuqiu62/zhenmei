@@ -1,0 +1,1683 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Microsoft YaHei', sans-serif;
+}
+
+@font-face {
+    font-family: 'Source Han Sans CN VF Regular';
+    /* 设置字体名称 */
+    src: url('fonts/Source Han Sans CN VF Regular.otf') format('opentype');
+    /* 指定字体文件路径 */
+    font-weight: normal;
+    /* 字体粗细 */
+    font-style: normal;
+    /* 字体样式 */
+}
+
+/*
+        100 - Thin
+        200 - Extra Light (Ultra Light)
+        300 - Light
+        400-Regular (Normal、 Book、 Roman)
+        500 - Medium
+        600 - Semi Bold (Demi Bold)
+        700 - Bold
+        800 - Extra Bold (Ultra Bold) 
+        900 - Black (Heavy)
+        normal、regular 与'400'相同。
+        bold 与'700'相同。
+        bolder 指定外观的重量大于继承的值。
+        lighter 指定外观的重量小于继承的值。
+        */
+/* 全局样式 */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #f8f4f1;
+    line-height: 1.6;
+}
+
+/*字体*/
+h2 {
+    font-size: 40px;
+    /* 字体大小 */
+    font-weight: 700;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 68px;
+}
+
+.Body-Copy {
+    font-size: 20px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 36px;
+}
+
+.Body-Copy2 {
+    font-size: 21px;
+    /* 字体大小 */
+    font-weight: 400;
+    line-height: 28px;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+}
+
+h1 {
+    font-size: 60px;
+    font-weight: 500;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 74px;
+}
+
+text {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+}
+
+.Body-Copy1 {
+    font-size: 19px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 30px;
+}
+
+h3 {
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 44px;
+}
+
+h4 {
+    font-size: 30px;
+    font-weight: 500;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 32px;
+}
+
+.Body-Copy3 {
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 24px;
+}
+
+.Quotes {
+    font-size: 35px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    line-height: 37px;
+}
+
+/*按钮*/
+.btn {
+    width: 179px;
+    height: 52px;
+    padding: 12px 30px;
+    background: #1F422B;
+    color: white;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+}
+
+.btn:hover {
+    background: #E0FF00;
+    color: #000000;
+}
+
+/* 导航栏 */
+.navbar {
+    position: fixed;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+.navbar nav {
+    width: 1718px;
+}
+
+/* 新增下拉菜单样式 */
+.navbar li {
+    position: relative;
+    /* 为下拉菜单定位准备 */
+}
+
+.navbar-dropdown,
+.drop-down-content,
+.drop-down-content-2 {
+    display: none;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.95);
+    min-width: 94px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+
+    z-index: 100;
+}
+
+/* 二级菜单定位 */
+.navbar-dropdown {
+    top: 100%;
+    left: 0;
+}
+
+/* 三级菜单定位 */
+.navbar .drop-down-2 {
+    position: relative;
+    width: 100%;
+}
+
+.navbar .drop-down-content-2 {
+    padding: 0;
+    display: none;
+    position: absolute;
+    width: 100px;
+    z-index: 1;
+    background-color: #fff;
+    left: 80px;
+    top: 0;
+}
+
+.navbar.drop-down-content-2>li {
+    float: none;
+    background-color: #ff9c01;
+}
+
+.navbar .drop-down-content-2 li:hover a {
+    background-color: #ff9c01;
+}
+
+.navbar.drop-down-2:hover .drop-down-content-2 {
+    display: block;
+}
+
+
+/* 悬停显示 */
+.navbar li:hover>.navbar-dropdown,
+.navbar li:hover>.drop-down-content,
+.drop-down-2:hover>.drop-down-content-2 {
+    display: block;
+}
+
+/* 下拉菜单项样式 */
+.navbar-item {
+    display: block;
+    color: #333;
+    transition: all 0.3s;
+    text-align: center;
+}
+
+.navbar-item:hover {
+
+    color: white;
+    transform: translateX(5px);
+}
+
+/* 当前导航文字颜色 */
+.navbar nav ul li a {
+    position: relative;
+    /* 为下划线定位 */
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+}
+
+.navbar nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 50%;
+    background-color: #1F422B;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+/* 悬停时显示下划线 */
+.navbar nav ul li a:hover::after {
+    width: 100%;
+    /* 悬停时展开到100%宽度 */
+}
+
+
+
+/* logo布局调整 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+/* 确保 logo 位于左右两侧 */
+.navbar>nav:first-child,
+.navbar>nav:last-child {
+    width: 100px;
+    /* 控制logo容器宽度 */
+}
+
+/* 导航菜单横向布局 */
+.navbar nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.navbar .navbar-Account {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    margin-left: 28px;
+}
+
+.navbar nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* 横向排列 */
+    gap: 19px;
+    /* 增加菜单项间距 */
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    font-weight: 400;
+}
+
+/* 悬停时，字体变为黑色，背景变为黄色 */
+.navbar nav ul li a:hover {
+    border-radius: 5px;
+}
+
+
+
+/* 当前导航文字颜色 */
+.navbar nav ul li a {
+    color: #333;
+    transition: color 0.3s;
+}
+
+
+
+/* logo布局调整 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.navbar>nav:first-child {
+    width: 450px;
+}
+
+.navbar>nav:last-child {
+    width: 100px;
+    /* 控制logo容器宽度 */
+}
+
+/* 其他部分样式 */
+.hero-section {
+    position: relative;
+    width: 100%;
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* 内容容器 */
+.container {
+    max-width: 1720px;
+    margin: 0 auto;
+    margin-top: 118px;
+}
+
+/*背景图*/
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    /* 设定为视口高度，确保图片占满整个屏幕 */
+}
+
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 使图片充满容器，同时保持图片比例 */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    /* 文字颜色 */
+    text-align: center;
+    z-index: 2;
+    /* 确保文字在图片上方 */
+}
+
+.overlay h1 {
+    font-size: 70px;
+    line-height: 80px;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    font-weight: 500;
+    max-width: 784px;
+    word-wrap: break-word;
+    /* 自动换行 */
+    overflow-wrap: break-word;
+    /* 自动换行（现代浏览器） */
+    white-space: normal;
+    /* 默认文本换行 */
+    max-width: 780px;
+    /* 限制最大宽度为 100% */
+    box-sizing: border-box;
+    /* 确保 padding 和 border 不影响宽度 */
+}
+
+.overlay p {
+    max-width: 616px;
+    margin-top: 183px;
+}
+
+.overlay img {
+    margin-top: 43px;
+}
+
+/* 我们能做什么模块 */
+.what-we-do {
+    background: #fff;
+    padding: 60px 0;
+}
+
+.what-we-do h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+
+/* 图片占位框 */
+.img-box {
+    width: 100%;
+    height: 200px;
+    border: 2px dashed #999;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+}
+
+/* 服务三列布局 */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+
+}
+
+.shenmo {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.container h2 {
+    margin-left: 20PX;
+}
+
+/* 赋能培训 */
+.research img {
+    width: 846px;
+    height: 913px;
+}
+
+.research .Copywriting {
+    width: 846px;
+    height: 255px;
+    background: #ffffff;
+}
+
+.Copywriting {
+    background: #ffffff;
+}
+
+.Copywriting h3 {
+    color: rgb(0, 0, 0);
+    margin: 34px 0 0 28px;
+}
+
+.Copywriting p {
+    color: rgb(0, 0, 0);
+    margin: 21px 0 0 29px;
+    max-width: 336px;
+}
+
+.research p {
+    position: absolute;
+    color: rgb(0, 0, 0);
+    margin: 21px 0 0 40px;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-width: 422px;
+    box-sizing: border-box;
+    z-index: 6;
+}
+
+.research h3 {
+    color: rgb(0, 0, 0);
+    margin: 61px 0 0 40px;
+}
+
+.research button {
+    background: #E8E1DF;
+    color: #000000;
+    position: absolute;
+    z-index: 6;
+    margin: 21px 0 0 628px;
+}
+
+.research button:hover {
+    background: #E0FF00;
+}
+
+/* 赋能教师 */
+.empowerment {
+    height: 574px;
+}
+
+.empowerment .img {
+    width: 415px;
+    height: 319px;
+}
+
+.empowerment .Copywriting {
+    width: 415px;
+    height: 255px;
+
+}
+
+/* 独创课程 */
+.course {
+    height: 574px
+}
+
+.course .img {
+    width: 415px;
+    height: 319px;
+}
+
+.course .Copywriting {
+    width: 415px;
+    height: 255px;
+
+}
+
+/* 开放资源 */
+.resources {
+    width: 849px;
+    height: 319px;
+    margin: 20px 0;
+}
+
+.resources .img {
+    width: 415px;
+    height: 319px;
+}
+
+.resources .Copywriting {
+    width: 851px;
+    height: 255px;
+}
+
+.research .Copywriting p {
+    max-width: 442px;
+}
+
+.service-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.btn2 {
+    display: block;
+    margin: 0 auto
+}
+
+.btn2 {
+    background: #E8E1DF;
+    color: #000000;
+    margin: 68px 0 0 628px;
+}
+
+.container button:hover {
+    background: #E0FF00;
+}
+
+/* 轮播图 */
+
+.carousel-container {
+    max-width: 1816px;
+    margin: 20px auto;
+    position: relative;
+    overflow: hidden;
+    margin: 118px 10px 0 0;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease;
+    /* 平滑过渡 */
+}
+
+/* 双栏布局 */
+.two-column {
+    display: grid;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.carousel-item {
+    min-width: 100%;
+    height: 973px;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    background: #ffffff;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-button.prev {
+    left: 0;
+}
+
+.carousel-button.next {
+    right: 0;
+}
+
+.carousel-indicators {
+    position: absolute;
+    top: 174px;
+    left: 149px;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.carousel-item h2 {
+    margin: 271px 0 0 103px;
+}
+
+.carousel-item h1 {
+    margin: 24px 0 0 103px;
+}
+
+.carousel-item p {
+    margin: 39px 0 0 103px;
+}
+
+.carousel-item button {
+    margin: 28px 0 0 103px;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-item .carousel-button.next {
+    background: #E8E1DF;
+    color: #000000;
+    margin: 21px 0 0 21px;
+}
+
+.carousel-button.next:hover {
+    background: #E0FF00;
+}
+
+.indicator.active {
+    background-color: black;
+}
+
+.Original .Course {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/*真美课程介绍*/
+.Original-Course {
+    position: relative;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    /* 设置半透明背景 */
+}
+
+.Original-Course::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3));
+    z-index: 5;
+}
+
+/* 修改文字元素的样式 */
+.Original-Course h1,
+.Original-Course h2,
+.Original-Course h3,
+.Original-Course p {
+    color: #f8f8f8;
+    /* 确保文字颜色清晰可见 */
+    position: absolute;
+    /* 改为相对定位 */
+    z-index: 6;
+    /* 文字内容在最上层 */
+}
+
+.Original-Course button {
+    background-color: #E8E1DF;
+    position: absolute;
+    /* 改为相对定位 */
+    z-index: 6;
+    color: #000000;
+}
+
+.Original-Course button:hover {
+    background-color: #E0FF00;
+}
+
+.zhenmeiintroduce {
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    margin: 0 0 0 0;
+    z-index: 4;
+    /* 确保在父容器上方 */
+}
+
+.zhenmei1 {
+    max-width: 1278px;
+    max-height: 1039px;
+}
+
+.zhenmei1 h2 {
+    margin: 111px 0 0 102px;
+}
+
+.zhenmei1 h1 {
+    margin: 203px 0 0 102px;
+    word-wrap: break-word;
+    /* 自动换行 */
+    overflow-wrap: break-word;
+    /* 自动换行（现代浏览器） */
+    white-space: normal;
+    /* 默认文本换行 */
+    max-width: 780px;
+    /* 限制最大宽度为 100% */
+    box-sizing: border-box;
+    /* 确保 padding 和 border 不影响宽度 */
+}
+
+.zhenmei2 {
+    max-width: 642.67px;
+    max-height: 1039px;
+    overflow: hidden;
+}
+
+.zhenmeikecheng {
+    max-width: 640px;
+    max-height: 519px;
+    overflow: hidden;
+}
+
+.zhenmeiproject {
+    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    margin: 0 0 0 0;
+}
+
+.zhenmeikecheng h3 {
+    position: absolute;
+    color: white;
+    margin: 0;
+}
+
+.zhenmeikecheng p {
+    position: absolute;
+    color: white;
+    margin: 0;
+}
+
+.zhenmeikecheng h3 {
+    margin: 222PX 0 0 75PX;
+}
+
+.zhenmeikecheng P {
+    margin: 297PX 0 0 75PX;
+    word-wrap: break-word;
+    /* 自动换行 */
+    overflow-wrap: break-word;
+    /* 自动换行（现代浏览器） */
+    white-space: normal;
+    /* 默认文本换行 */
+    max-width: 420px;
+    /* 限制最大宽度为 100% */
+    box-sizing: border-box;
+    /* 确保 padding 和 border 不影响宽度 */
+}
+
+.zhenmeikecheng button {
+    margin: 410PX 0 0 75PX;
+}
+
+/* 开放资源 */
+.scrollable-carousel-container {
+    width: 100%;
+    overflow-x: auto;
+    padding-left: 21px;
+    scroll-behavior: smooth;
+    cursor: grab;
+}
+
+.Three-scrollable {
+    margin-top: 192px;
+    text-align: center;
+    /* 让文本居中 */
+}
+
+.Three-scrollable h1 {
+    max-width: 722px;
+    text-align: center;
+    /* 水平居中 */
+    margin: 0 auto;
+    /* 确保 <h1> 宽度自适应居中 */
+}
+
+.scrollable-carousel-item {
+    text-align: center;
+}
+
+.scrollable-carousel-item h5 {
+    margin-top: 199px;
+    font-size: 40px;
+    /* 设置字体大小为40px */
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    font-weight: medium;
+}
+
+.scrollable-carousel-item p {
+    margin-top: 8px;
+    font-size: 16px;
+    /* 设置字体大小为40px */
+    line-height: 24px;
+    max-width: 236px;
+    word-wrap: break-word;
+    /* 自动换行 */
+    overflow-wrap: break-word;
+    /* 自动换行（现代浏览器） */
+    white-space: normal;
+    /* 默认文本换行 */
+    box-sizing: border-box;
+    /* 确保 padding 和 border 不影响宽度 */
+    margin: 0 auto;
+}
+
+.scrollable-carousel-item button {
+    margin-top: 93px;
+}
+
+.scrollable-carousel-track {
+    display: flex;
+    gap: 21px;
+    padding: 2px 0;
+    /* 预留外边框位置 */
+}
+
+.scrollable-carousel-item {
+    flex-shrink: 0;
+    height: 511px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.item-378 {
+    width: 378px;
+}
+
+.item-381 {
+    width: 381px;
+}
+
+.scrollable-carousel-container::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollable-carousel-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* 真美之声 */
+.zhenmeizhisheng {
+    margin: 193PX 0 0 0;
+}
+
+.zhenmeizhisheng h2 {
+    margin-left: 103px;
+}
+
+.ZMZS {
+    display: grid;
+    gap: 40px;
+    margin: 99px 99px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.zhisheng {
+    position: relative;
+    /* 关键定位 */
+    width: 850px;
+    /* 根据实际宽度调整 */
+    height: 100vh;
+}
+
+.zhisheng h3 {
+    margin: 77px 0 0 85px;
+}
+
+.zhisheng p {
+    margin: 496px 0 0 86px;
+    max-width: 578px;
+    word-wrap: break-word;
+    /* 自动换行 */
+    overflow-wrap: break-word;
+    /* 自动换行（现代浏览器） */
+    white-space: normal;
+    /* 默认文本换行 */
+    box-sizing: border-box;
+    /* 确保 padding 和 border 不影响宽度 */
+
+}
+
+.zhisheng button {
+    margin: 32px 0 0 86PX;
+    position: relative;
+    /* 相对定位 */
+    /* 向下移动 496px */
+}
+
+.text-overlay {
+    position: absolute;
+    z-index: 1;
+    /* 确保文字在图片上方 */
+    color: white;
+    /* 根据图片颜色调整 */
+    width: 100%;
+
+}
+
+
+/* 联系我们 */
+/* 联系表单 */
+.contact-form {
+    width: 100%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="cell-phone"] {
+    width: 308px;
+    height: 46px;
+    padding: 12px;
+    margin: 14px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.team1 {
+    height: 883px;
+    display: flex;
+    flex-direction: column;
+    /* 让子元素纵向排列 */
+    align-items: baseline;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    text-align: center;
+    /* 让文本居中 */
+    height: 100vh;
+    /* 让整个区域充满视口高度 */
+}
+
+.team {
+
+    height: 883px;
+    display: flex;
+    flex-direction: column;
+    /* 让子元素纵向排列 */
+    align-items: center;
+    /* 水平居中 */
+    justify-content: center;
+    /* 垂直居中 */
+    text-align: center;
+    /* 让文本居中 */
+    height: 100vh;
+    /* 让整个区域充满视口高度 */
+}
+
+.team1 h2 {
+    margin: 117px 0 0 101px;
+}
+
+.team1 h1 {
+    margin: 36px 0 0 101px;
+    max-width: 711px;
+}
+
+.team1 p {
+    margin: 36px 0 0 101px;
+    max-width: 635px;
+}
+
+
+/* 页脚 */
+.zme-footer {
+    width: 100%;
+    height: 462px;
+    background-color: #1F422B;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.footer-container {
+    max-width: 1920px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.Logo-in-footer {
+    margin: 90px 0 0 101px;
+}
+
+.footer-section11 {
+    min-width: 116px;
+    min-height: 196px;
+    margin: 90px 0 180px 288px;
+}
+
+.footer-section {
+    flex: 1;
+    max-width: 116px;
+    min-height: 196px;
+    margin: 135px 0 0 43px;
+}
+
+.footer-title {
+    color: #ffffff;
+    font-size: 23px;
+    margin-bottom: 9px;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    font-weight: bold;
+
+}
+
+.contact-block {
+    flex: 1;
+    max-width: 548px;
+    min-height: 196px;
+    margin: 88px 110px 0 293px;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    list-style: none;
+}
+
+.footer-links a {
+    color: #ffffff;
+    font-size: 25px;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+.contact-info a {
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="email2"] {
+    width: 548px;
+    height: 62px;
+    padding: 14px;
+    margin: 10px 0;
+    border: 1px solid #666;
+    background: white;
+    margin-bottom: 17px;
+}
+
+.contact-block p {
+    display: flex;
+    align-items: center;
+    /* 垂直居中对齐 */
+}
+
+.contact-block p img {
+    margin-right: 10px;
+    /* 给图片与文字之间添加间距 */
+}
+
+.contact-block-form button {
+    width: 179px;
+    height: 52px;
+    padding: 12px 30px;
+    background: #E0FF00;
+    color: #000000;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    margin-left: 370px;
+    display: inline-block;
+}
+
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+}
+
+/* 在原有样式基础上添加 */
+.form-group input[type="text"] {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #fff;
+    resize: vertical;
+    min-height: 80px;
+    font-size: 14px;
+}
+
+.form-group input[type="text"]:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: #1F422B;
+    outline: none;
+    box-shadow: 0 0 5px rgba(31, 66, 43, 0.2);
+}
+
+/* 添加必填项标记 */
+.form-group label::after {
+    content: '*';
+    color: #ff4444;
+    margin-left: 4px;
+}
+
+/* 备注标签不显示必填标记 */
+.form-group label[for="remarks"]::after {
+    content: '';
+}
+
+
+
+
+
+/* 关于我们 */
+.about-us-background {
+    width: 1920px;
+    height: 100%;
+}
+
+.about-us-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: stretch;
+}
+
+.about-us-background img {
+    width: 100%;
+}
+
+.about-us-content h2 {
+    margin-top: 160px;
+}
+
+
+.about-us-content h1 {
+    max-width: 1011px;
+    margin-top: 24px;
+    text-align: center;
+
+}
+
+.about-us-content p {
+    margin-top: 24px;
+    text-align: center;
+    max-width: 616px;
+}
+
+
+
+
+
+.about-us-video {
+    width: 1718px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.about-us-video img {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.about-us-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 164px 0 0 47px;
+    width: 1768px;
+    height: 740px;
+}
+
+.about-us-item-content {
+    margin: auto;
+    width: 634px;
+    height: 740px;
+}
+
+.about-us-item h2 {
+    margin: 164px 0 0 55px;
+
+}
+
+.about-us-item h1 {
+    margin: 24px 0 0 55px;
+    max-width: 463px;
+
+
+}
+
+.about-us-item p {
+    margin: 24px 0 0 55px;
+    max-width: 480px;
+
+
+}
+
+.about-us-item-img {
+    width: 1134px;
+}
+
+.about-us-item-2 {
+    margin-top: 164px;
+    margin-left: 30%;
+    width: 851px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.about-us-item-2-content {
+    width: 850px;
+    margin: auto;
+}
+
+.about-us-item-2 p {
+    margin-top: 30px;
+}
+
+.about-us-item-2 img {
+    margin-top: 35px;
+    width: 849px;
+}
+
+.contact-block-title1 {
+    width: 100%;
+    height: 780px;
+    background: rgba(128, 204, 191, 0.5);
+    ;
+    margin-top: 164px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-block-title1-content {
+    width: 1372px;
+    height: 378px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-block-title1-content1 {
+    width: 645px;
+    height: 397px;
+}
+
+.contact-block-title1-content1 p {
+    margin-top: 28px;
+    max-width: 645px;
+}
+
+.contact-block-title2 {
+    width: 1920px;
+
+}
+
+.contact-block-title2-content2 {
+    width: 1718px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+
+}
+
+.contact-block-title2-content2-item {
+    width: 848px;
+    margin: 0 22px 0 0;
+}
+
+.contact-block-title2 h5 {
+    margin: 0 0 0 33px;
+    font-size: 40px;
+    font-weight: 500;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    margin-bottom: 7px;
+}
+
+.contact-block-title2-content2-item p {
+    margin: 0 0 0 33px;
+    max-width: 422px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+    margin-bottom: 7px;
+}
+
+.contact-block-title2-content2-item button {
+    margin: 45px 0 68px 33px;
+    background: #E8E1DF;
+    color: #000000;
+}
+
+.contact-block-title2-content2-item button:hover {
+    background: #E0FF00;
+}
+
+.contact-block-title2-content2-item img {
+    width: 100%;
+}
+
+.Thematic-training-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 60px 105px 0 0;
+    height: 740px;
+}
+
+.Thematic-training-content {
+    height: 740px;
+}
+
+.Thematic-training-item h2 {
+    margin: 117px 0 0 101px;
+}
+
+.Thematic-training-item h1 {
+    margin: 36px 0 0 101px;
+    max-width: 515px;
+}
+
+.Thematic-training-item p {
+    margin: 36px 0 0 101px;
+    max-width: 480px;
+}
+
+.Thematic-training-item-img img {
+    width: 934px;
+}
+
+.Thematic-training-item1 {
+    margin-left: 101px;
+}
+
+/*按钮*/
+.bin3 {
+    width: 179px;
+    height: 52px;
+    padding: 12px 30px;
+    background: #E8E1DF;
+    color: #000000;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    display: inline-flex; /* 保持行内特性 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+}
+
+.bin3:hover {
+    background: #E0FF00;
+    color: #000000;
+}
+
+
+.bin3 {
+    /* 保持原有基础样式 */
+    background: #E8E1DF;
+    color: #000000;
+    transition: all 0.3s ease;
+    position: relative; /* 为下划线定位 */
+}
+
+.bin3.active {
+    background: #E0FF00; /* 主品牌色 */
+    color: #000000
+    
+    
+    ;
+    /* 添加立体效果 */
+    box-shadow: 0 4px 8px rgba(31, 66, 43, 0.2);
+    /* 底部装饰线 */
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: -8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+        height: 3px;
+        background: #E0FF00;
+        border-radius: 2px;
+    }
+}
+
+.search-container {
+    position: relative;
+    display: inline-block;
+    margin-left: 20px; /* 与标签按钮间距 */
+}
+
+.Thematic-training-search {
+    width: 240px;
+    height: 52px;
+    padding: 0 40px 0 20px; /* 右侧留出图标空间 */
+    border: 2px solid #E8E1DF;
+    border-radius: 26px;
+    font-size: 16px;
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.Thematic-training-search:focus {
+    outline: none;
+    border-color: #1F422B;
+    box-shadow: 0 0 8px rgba(31, 66, 43, 0.2);
+}
+
+.search-icon {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    pointer-events: none; /* 防止图标阻挡输入 */
+}
+
+input[type="Thematic-training-search"]{
+    width: 250px;
+    height: 49px;
+    padding: 12px;
+    margin: 14px 0;
+    border: 1px solid #9C9C9C;
+    border-radius: 26px;
+}
+.Thematic-training-item1-content-1 {
+    width: 1718px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: auto;
+    gap: 21px;
+}
+.card {
+    background: white;
+    padding: 10px;
+    gap: 21px;
+    display: inline;
+}
+.card-content{
+    display: flex;
+    justify-content: space-between; /* 左右分散对齐 */
+    align-items: center;            /* 垂直居中（可选） */
+    margin-top: 50px;
+}
+.image-placeholder {
+    max-width: 538px;
+    height: 422px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: #888;
+    border-bottom: 2px solid #ccc;
+}
+.image-placeholder img{
+    width: 100%;
+    height: 100%;
+}   
+.card h3{
+    max-width: 258px;
+}
+.card .Number-2{
+    max-width: 134px;
+    margin: 0 39px 0 0 ;
+}
+.card .Body-Copy3{
+    margin-top: 19px;
+    max-width: 480px;
+}
+.card button{
+    margin-top: 51px;
+}
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+    max-height: 0;
+    margin: 0;
+    padding: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    pointer-events: none; /* 禁用交互 */
+}
+
+.load-more {
+    display: block;
+    margin: auto;
+    transition: opacity 0.3s;
+}
+
+.card {
+    /* 移除强制显示声明 */
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: all 0.3s ease; /* 统一过渡属性 */
+    will-change: transform; /* 优化动画性能 */
+    max-height: 800px; /* 根据实际内容设置 */
+    overflow: hidden;
+}
+.card .btn {
+    width: 179px;
+    height: 52px;
+    padding: 12px 30px;
+    background: #E8E1DF;
+    color: #000000;
+    border: none;
+    border-radius: 26px;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+}
+
+.card .btn:hover {
+    background: #E0FF00;
+    color: #000000;
+}
+
+
+.card:not(.hidden) {
+    opacity: 1;
+}
+
+/* 覆盖bin3按钮样式 */
+.load-more.bin3 {
+    display: block !important; 
+    margin: 40px auto;
+    width: 200px;
+ 
+}
+.hidden {
+    display: none;
+  }
+  
+
+  .load-more {
+    margin-top: 77px;
+    margin-left:45%;
+    width: 179px;
+    height: 52px;
+    display: inline-flex; /* 保持行内特性 */
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    background: #1F422B;
+    color: white;
+    border-radius: 26px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Source Han Sans CN VF Regular", sans-serif;
+  }
+  
+  .load-more:hover {
+    background-color: #E0FF00;
+    color: #000000;
+  }
+  
+  .load-more.disabled {
+    background: #E0FF00;
+    color: #000000;
+  }
+  .Thematic-training-search::placeholder {
+    color: #999;
+    font-style: italic;
+}
+
+.Thematic-training-search:focus::placeholder {
+    color: transparent;
+}         
+ 
+          
+          
+/*
+        100 - Thin
+        200 - Extra Light (Ultra Light)
+        300 - Light
+        400-Regular (Normal、 Book、 Roman)
+        500 - Medium
+        600 - Semi Bold (Demi Bold)
+        700 - Bold
+        800 - Extra Bold (Ultra Bold) 
+        900 - Black (Heavy)
+        normal、regular 与'400'相同。
+        bold 与'700'相同。
+        bolder 指定外观的重量大于继承的值。
+        lighter 指定外观的重量小于继承的值。
+        */
+

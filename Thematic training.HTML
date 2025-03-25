@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专题培训</title>
+    <link rel="stylesheet" href="css\styles.css">
+</head>
+<body>
+     <!-- 1	导航栏 -->
+    <header class="navbar" style="top: 0; background-color: #ffffff;">
+	<nav><a href="index.html"><img src="icon\Logo.svg"> </a></nav>
+        <nav>
+            <ul>
+                <li><a href="About us.html">关于我们</a></li>
+                <li><a href="#about">真美研究</a></li>
+                <li>
+                    <a href="#">赋能教师</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="Thematic training.html">专题培训</a>
+                        <a class="navbar-item" href="blog-sidebar2.html">成功案例</a>
+                        <a class="navbar-item" href="blog-sidebar.html">教师风采</a>
+						<a class="navbar-item" href="blog-sidebar2.html">学习手册</a>
+                        <a class="navbar-item" href="blog-sidebar.html">生成课程</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">真美课程</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="service1.html">科学真美</a>
+                        <a class="navbar-item" href="service2.html">艺术真美</a>
+                        <a class="navbar-item" href="service5.html">人文素养</a>
+						<ul>
+                        <li class="drop-down-2">
+                            <a class="navbar-item" href="#">项目课 ></a>
+                            <div class="drop-down-content-2">
+                                <a class="navbar-item" href="service7.html">宇宙真美</a>
+                                <a class="navbar-item" href="service3.html">故宫真美</a>
+                                <a class="navbar-item" href="service4.html">节气真美系列</a>
+                            </div>
+                        </li>
+						</ul>
+                    </div>
+                </li>
+                <li>
+                    <a href="#services">艺术资源</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="artistic-works.html">艺术作品</a>
+                        <a class="navbar-item" href="artistic-works.html">艺术动图</a>
+                        <a class="navbar-item" href="artistic-works.html">摄影作品</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#contact">真美之声</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="about.html">来自课堂</a>
+                        <a class="navbar-item" href="cause-single.html">来自一线</a>
+                        <a class="navbar-item" href="blog-grid.html">成果汇报</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="#contact">联系我们</a>
+                    <div class="navbar-dropdown">
+                        <a class="navbar-item" href="donation.html">合作</a>
+                        <a class="navbar-item" href="event-single.html">招聘</a>
+  
+                    </div>
+                </li>
+            </ul>
+        </nav>
+		<nav class="navbar-Account"><img src="icon\Account Icon.svg"></nav>
+    </header>
+
+<section class="Thematic-training">
+    <div class="Thematic-training-item">
+        <div class="Thematic-training-content">
+            <h2>专题培训</h2>
+            <h1>聚焦前沿教育理念
+                提升教学技能</h1>
+            <p class="Body-Copy1">真美专题培训聚焦教育前沿趋势，围绕科学、艺术、人文等多学科融合教学，为教师提供系统化的成长支持。通过案例分享、实践研讨和创新课程设计，帮助教师提升教学技能、优化课堂体验，并激发学生的创造力与综合能力。</p>
+        </div>
+        <div class="Thematic-training-item-img" >
+            <img src="images\img\about-us-item.png" ></img>
+        </div>
+    </div>
+    <div class="Thematic-training-item1">
+        <div class="bin3 active" onclick="switchTab('art')">美育</div>
+        <div class="bin3" onclick="switchTab('science')">科学</div>
+        <div class="search-container">
+            <input type="Thematic-training-search" 
+                   id="search" 
+                   class="Thematic-training-search"
+                   placeholder="搜索标题、日期或内容..." 
+                   oninput="searchContent()"
+                   onkeypress="handleSearchKey(event)"
+                   title="支持搜索标题、日期(格式: 2025.01.01)和简介内容">
+            <img src="icon/Search Icon.svg" 
+                 class="search-icon" 
+                 alt="搜索"
+                 onclick="triggerSearch()">
+        </div>
+    </div>
+    <div class="Thematic-training-item1-content" id="content-art">
+    <div class="Thematic-training-item1-content-1">
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育1</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育2</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">1505.06.06</p>
+            </div>
+            <p class="Body-Copy3">321313</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育3</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育4</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育5</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>美育6</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+    </div>
+        <div class="load-more">
+            加载更多
+        </div>
+    </div>
+    <div class="Thematic-training-item1-content hidden" id="content-science">
+    <div class="Thematic-training-item1-content-1">    
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+        <div class="card">
+            <div class="image-placeholder ">
+                <img src="images\img\about-us-item.png"></img>
+            </div>
+            <div class="card-content">
+                <h3>专题标题</h3>
+                <p class="Number-2">2025.01.01</p>
+            </div>
+            <p class="Body-Copy3">结合本地实际需求，我们设计创新性课程内容，让孩子们通过多样化的学习方式，拓展视野，激发潜能。</P>
+            <button class="btn">了解详情</button>
+        </div>
+    </div>
+    <div class="load-more">加载更多</div>
+    </div>
+
+    
+    <!-- 联系表单 -->
+    <div class="contact-form">
+        <div class="team1">
+            <h2>联系我们</h2>
+            <h1>如果您对我们的项目感兴<br>趣，或希望了解更多信息<br>，请随时与我们联系。</h1>
+            <p class="Body-Copy1">无论是合作咨询、资源支持，还是意见反馈，我们都期待<br>听到您的声音。一起携手，为教育创造更多可能！</p>
+            <div>
+                <button class="btn" style="width:179px; margin-top: 20px">了解合作</button>
+                <button class="btn" style="width:179px; margin-top: 20px">真美职业</button>
+            </div>
+        </div>
+        <div class="team">
+            <img src="images\img\touxiang.png"></img>
+            <h3>与真美团队<br>取得联系</h3>
+            <form>
+                <input type="text" placeholder="姓名"><br>
+                <input type="cell-phone" placeholder="手机"><br>
+                <input type="email" placeholder="电子邮箱"><br>
+                <button class="btn" >提交咨询</button>
+            </form>
+        </div>
+    </div>
+</section>
+    <!-- 页脚 -->
+<footer class="zme-footer">
+  <div class="footer-container">
+	<div class="Logo-in-footer">
+		<img src="icon\Logo in footer.svg"></img>
+	</div>
+    <!-- 了解我们区块 -->
+    <div class="footer-section11">
+      <h4 class="footer-title">了解我们</h4>
+      <ul class="footer-links">
+        <li><a href="#">关于我们</a></li>
+        <li><a href="#">真美研究</a></li>
+        <li><a href="#">赋能教师</a></li>
+      </ul>
+    </div>
+    <div class="footer-section">
+		<ul class="footer-links">
+		  <li><a href="#">真美课程</a></li>
+		  <li><a href="#">艺术资源</a></li>
+		  <li><a href="#">真美之声</a></li>
+		</ul>
+	  </div>
+
+    <!-- 联系区块 -->
+    <div class="contact-block">
+      <h4 class="footer-title">联系我们</h4>
+      <div class="contact-info">
+       <p><img src="icon\footer Icon_2.svg"></img> <a href="tel:+010-60228066">+010-60228066</a></p>
+       <p><img src="icon\footer Icon_1.svg"></img><a href="mailto:admin@zhenmeiedu.com">admin@zhenmeiedu.com</a></p>
+		<form class="contact-block-form">
+			<input type="email2" placeholder="留下您的联系方式" required>
+			<button  type="submit">提交</button>
+		</form>
+	  </div>
+    </div>
+</footer>
+</body>
+<script src="js\script.js"></script>
+<script src="js\Empower teachers.js"></script>
+</html>
